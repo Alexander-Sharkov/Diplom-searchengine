@@ -1,0 +1,44 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    username: root
+    password: testtest
+    url: jdbc:mysql://localhost:3306/search_engine?useSSL=false&requireSSL=false&allowPublicKeyRetrieval=true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+      default-character-set: utf8mb4
+    show-sql: false
+
+indexing-settings:
+  sites:
+   - url: https://skillbox.ru/design/
+     name: skillbox-design
+   - url: https://www.playback.ru/
+     name: playback
+  # - url: https://volochek.life/
+  #   name: volochek.life
+  # - url: http://radiomv.ru/
+  #   name: radiomv.ru
+  # - url: https://ipfran.ru/
+  #   name: ipfran.ru
+  # - url: https://dimonvideo.ru/
+  #   name: dimonvideo.ru
+  # - url: https://nikoartgallery.com/
+  #   name: nikoartgallery.com
+  # - url: https://et-cetera.ru/mobile/
+  #   name: et-cetera.ru
+  # - url: https://www.lutherancathedral.ru/
+  #   name: lutherancathedral
+  # - url: https://www.svetlovka.ru/
+  #   name: svetlovka
+
+jsoup:
+  userAgent: "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"
+  referrer: "MyCompany"
+  snippetLength: 300
